@@ -1,0 +1,19 @@
+{
+  "name": "pdf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./app.js",
+    "dev": "nodemon ./app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "jspdf": "^2.5.1",
+    "pdfmake": "^0.2.7",
+    "puppeteer": "^21.2.1"
+  }
+}
