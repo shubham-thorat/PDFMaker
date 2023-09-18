@@ -76,7 +76,7 @@ async function generatePDF(i) {
 }
 
 const interval = setInterval(() => {
-  if (result.length === times) {
+  if (result.length === parseInt(times)) {
     let max = 0, min = null, total = 0;
 
     result.map((data) => {
@@ -91,10 +91,13 @@ const interval = setInterval(() => {
     })
 
     addToJSON({
+      'data': result,
       'Max': max,
       'Min': min,
-      'total': total
+      'total': total,
+      'count': parseInt(times)
     })
+    result = []
     clearInterval(interval)
   }
 }, 1000);

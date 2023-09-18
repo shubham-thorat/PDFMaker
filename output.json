@@ -1,7 +1,214 @@
 [
   {
-    "Max": 568,
-    "Min": 327,
-    "total": 2071
+    "data": [
+      {
+        "renderTime": 12,
+        "compileTime": 243,
+        "totalTime": 255
+      }
+    ],
+    "Max": 255,
+    "Min": 255,
+    "total": 255,
+    "count": 1
+  },
+  {
+    "data": [
+      {
+        "renderTime": 34,
+        "compileTime": 1191,
+        "totalTime": 1225
+      },
+      {
+        "renderTime": 19,
+        "compileTime": 1111,
+        "totalTime": 1130
+      },
+      {
+        "renderTime": 24,
+        "compileTime": 1165,
+        "totalTime": 1189
+      },
+      {
+        "renderTime": 69,
+        "compileTime": 1477,
+        "totalTime": 1546
+      },
+      {
+        "renderTime": 24,
+        "compileTime": 1258,
+        "totalTime": 1282
+      }
+    ],
+    "Max": 1546,
+    "Min": 1225,
+    "total": 6372,
+    "count": 5
+  },
+  {
+    "data": [
+      {
+        "renderTime": 71,
+        "compileTime": 2976,
+        "totalTime": 3047
+      },
+      {
+        "renderTime": 32,
+        "compileTime": 2701,
+        "totalTime": 2733
+      },
+      {
+        "renderTime": 46,
+        "compileTime": 2827,
+        "totalTime": 2873
+      },
+      {
+        "renderTime": 69,
+        "compileTime": 3377,
+        "totalTime": 3446
+      },
+      {
+        "renderTime": 55,
+        "compileTime": 2800,
+        "totalTime": 2855
+      },
+      {
+        "renderTime": 74,
+        "compileTime": 3282,
+        "totalTime": 3356
+      },
+      {
+        "renderTime": 58,
+        "compileTime": 2784,
+        "totalTime": 2842
+      },
+      {
+        "renderTime": 12,
+        "compileTime": 2655,
+        "totalTime": 2667
+      },
+      {
+        "renderTime": 5,
+        "compileTime": 2627,
+        "totalTime": 2632
+      },
+      {
+        "renderTime": 11,
+        "compileTime": 2648,
+        "totalTime": 2659
+      }
+    ],
+    "Max": 3446,
+    "Min": 3047,
+    "total": 29110,
+    "count": 10
+  },
+  {
+    "data": [
+      {
+        "renderTime": 26,
+        "compileTime": 5037,
+        "totalTime": 5063
+      },
+      {
+        "renderTime": 237,
+        "compileTime": 7094,
+        "totalTime": 7331
+      },
+      {
+        "renderTime": 5,
+        "compileTime": 5338,
+        "totalTime": 5343
+      },
+      {
+        "renderTime": 47,
+        "compileTime": 6028,
+        "totalTime": 6075
+      },
+      {
+        "renderTime": 80,
+        "compileTime": 6722,
+        "totalTime": 6802
+      },
+      {
+        "renderTime": 6,
+        "compileTime": 5999,
+        "totalTime": 6005
+      },
+      {
+        "renderTime": 123,
+        "compileTime": 6683,
+        "totalTime": 6806
+      },
+      {
+        "renderTime": 5,
+        "compileTime": 5875,
+        "totalTime": 5880
+      },
+      {
+        "renderTime": 185,
+        "compileTime": 7192,
+        "totalTime": 7377
+      },
+      {
+        "renderTime": 11,
+        "compileTime": 6081,
+        "totalTime": 6092
+      },
+      {
+        "renderTime": 37,
+        "compileTime": 6259,
+        "totalTime": 6296
+      },
+      {
+        "renderTime": 5,
+        "compileTime": 6184,
+        "totalTime": 6189
+      },
+      {
+        "renderTime": 5,
+        "compileTime": 6002,
+        "totalTime": 6007
+      },
+      {
+        "renderTime": 10,
+        "compileTime": 5953,
+        "totalTime": 5963
+      },
+      {
+        "renderTime": 6,
+        "compileTime": 6181,
+        "totalTime": 6187
+      },
+      {
+        "renderTime": 18,
+        "compileTime": 6276,
+        "totalTime": 6294
+      },
+      {
+        "renderTime": 6,
+        "compileTime": 6076,
+        "totalTime": 6082
+      },
+      {
+        "renderTime": 22,
+        "compileTime": 6187,
+        "totalTime": 6209
+      },
+      {
+        "renderTime": 13,
+        "compileTime": 6265,
+        "totalTime": 6278
+      },
+      {
+        "renderTime": 22,
+        "compileTime": 6126,
+        "totalTime": 6148
+      }
+    ],
+    "Max": 7377,
+    "Min": 5063,
+    "total": 124427,
+    "count": 20
   }
 ]
