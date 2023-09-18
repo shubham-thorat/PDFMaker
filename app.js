@@ -3,6 +3,7 @@ const ejs = require('ejs');
 const fs = require('fs');
 const path = require('path');
 const addToJSON = require('./calculator');
+require('dotenv').config()
 
 
 const userData = {
@@ -19,7 +20,7 @@ const userData = {
   // Add more user data as needed
 };
 
-let times = 5
+let times = process.env.COUNT || 1
 let result = []
 
 async function generatePDF(i) {
