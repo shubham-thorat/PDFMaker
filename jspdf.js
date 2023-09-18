@@ -26,14 +26,14 @@ let result = []
 async function generatePDF(i) {
   const doc = new jsPDF()
 
-  const template = fs.readFileSync(path.join(__dirname, './static/profile.html'), 'utf8');
+  // const template = fs.readFileSync(path.join(__dirname, './static/profile.html'), 'utf8');
   const start = Date.now()
-  const document = ejs.render(template, userData);
+  // const document = ejs.render(template, userData);
   const ejsEndTime = Date.now()
 
-  console.log("html : ", html)
+  // console.log("html : ", html)
 
-  doc.html(document)
+  doc.html('<h1> HELLO WORLd</h1>')
   doc.output(`./pdf/profile_jspdf.pdf`)
   const end = Date.now()
 

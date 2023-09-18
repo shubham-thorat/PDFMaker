@@ -294,5 +294,13 @@
     "Min": 1406,
     "total": 1406,
     "count": 1
+  },
+  {
+    "loadtime": 113,
+    "endTime": 184
+  },
+  {
+    "loadtime": 115,
+    "endTime": 182
   }
 ]
