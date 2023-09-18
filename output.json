@@ -210,5 +210,76 @@
     "Min": 5063,
     "total": 124427,
     "count": 20
+  },
+  {
+    "data": [
+      {
+        "renderTime": 9,
+        "compileTime": 2608,
+        "totalTime": 2617
+      },
+      {
+        "renderTime": 6,
+        "compileTime": 2727,
+        "totalTime": 2733
+      },
+      {
+        "renderTime": 15,
+        "compileTime": 2754,
+        "totalTime": 2769
+      },
+      {
+        "renderTime": 19,
+        "compileTime": 2804,
+        "totalTime": 2823
+      },
+      {
+        "renderTime": 24,
+        "compileTime": 2860,
+        "totalTime": 2884
+      },
+      {
+        "renderTime": 14,
+        "compileTime": 2798,
+        "totalTime": 2812
+      },
+      {
+        "renderTime": 5,
+        "compileTime": 2789,
+        "totalTime": 2794
+      },
+      {
+        "renderTime": 24,
+        "compileTime": 2743,
+        "totalTime": 2767
+      },
+      {
+        "renderTime": 12,
+        "compileTime": 2897,
+        "totalTime": 2909
+      },
+      {
+        "renderTime": 20,
+        "compileTime": 2886,
+        "totalTime": 2906
+      }
+    ],
+    "Max": 2909,
+    "Min": 2617,
+    "total": 28014,
+    "count": 10
+  },
+  {
+    "data": [
+      {
+        "renderTime": 91,
+        "compileTime": 4854,
+        "totalTime": 4945
+      }
+    ],
+    "Max": 4945,
+    "Min": 4945,
+    "total": 4945,
+    "count": 1
   }
 ]
