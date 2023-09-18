@@ -46,7 +46,7 @@ async function generatePDF(i) {
   // console.log('page : ', page)
   // Set the content to the rendered HTML
   await page.setContent(html);
-  await page.pdf({ path: `./pdf/profile_${i}.pdf`, format: 'A4' });
+  await page.pdf({ path: `./pdf/profile.pdf`, format: 'A4' });
   const end = Date.now()
   // await page.addStyleTag({
   //   path: path.join(__dirname, './static/style.css')
