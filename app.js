@@ -2,8 +2,9 @@ const puppeteer = require('puppeteer');
 const ejs = require('ejs');
 const fs = require('fs');
 const path = require('path');
+const { default: addToJSON } = require('./calculator');
 
-// User data (replace with your actual user data)
+
 const userData = {
   name: 'Shubham',
   age: 21,
@@ -17,7 +18,6 @@ const userData = {
   // imageURL: './user.jpeg'
   // Add more user data as needed
 };
-
 async function generatePDF() {
   const browser = await puppeteer.launch({
     // headless: false
@@ -36,8 +36,6 @@ async function generatePDF() {
   //   imageURL: 'https://cdn.pixabay.com/photo/2015/09/16/08/55/online-942406_960_720.jpg'
   // })
 
-
-  // console.log('browser : ', browser)
   const page = await browser.newPage();
   // await page.addScriptTag({ path: './ej2.min.js' })
   // console.log('page : ', page)
@@ -45,7 +43,7 @@ async function generatePDF() {
   await page.setContent(html);
   await page.pdf({ path: 'profile_4.pdf', format: 'A4' });
   const end = Date.now()
-  console.log('EJSRenderTime : ', ejsEndTime - start, "ConvertHTMLTOPDF: ", end - ejsEndTime, " TotalTime: ", end - start)
+  // console.log('EJSRenderTime : ', ejsEndTime - start, "ConvertHTMLTOPDF: ", end - ejsEndTime, " TotalTime: ", end - start)
   // await page.addStyleTag({
   //   path: path.join(__dirname, './static/style.css')
   // })
@@ -56,8 +54,22 @@ async function generatePDF() {
   // Generate a PDF
 
   await browser.close();
-
-  console.log('PDF generated successfully!');
+  let renderTime = ejsEndTime - start
+  let compileTime = end - ejsEndTime
+  let totalTime = end - start
+  addToJSON({
+    renderTime,
+    compileTime,
+    totalTime
+  })
 }
 
-generatePDF()
+
+function main() {
+  let times = 100
+  for (let i = 0; i < times; i++) {
+    generatePDF()
+  }
+}
+
+main()
