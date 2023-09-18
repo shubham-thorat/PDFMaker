@@ -48,8 +48,8 @@ async function createPDF() {
   nameField.enableMultiline()
 
 
-  const link = createPageLinkAnnotation(firstPage, 'https://pdf-lib.js.org/', [100, 100, 100, 100]);
-  firstPage.node.set(PDFName.of('Annots'), document.context.obj([link]));
+  // const link = createPageLinkAnnotation(firstPage, 'https://pdf-lib.js.org/', [100, 100, 100, 100]);
+  // firstPage.node.set(PDFName.of('Annots'), document.context.obj([link]));
 
   // const link2 = createPageLinkAnnotation(firstPage, 'https://pdf-lib.js.org/', [0, 0, 100, 100]);
   // firstPage.node.set(PDFName.of('Annots'), document.context.obj([link2]));
@@ -96,7 +96,8 @@ async function createPDF() {
   const endTime = Date.now();
   addToJSON({
     'loadtime': loadtime - startTime,
-    'endTime': endTime - startTime
+    'compiletime': endTime - loadtime,
+    'totalTime': endTime - startTime
   })
   console.log(JSON.stringify({
     'loadtime': loadtime - startTime,
