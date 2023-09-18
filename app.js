@@ -18,6 +18,10 @@ const userData = {
   // imageURL: './user.jpeg'
   // Add more user data as needed
 };
+
+let times = 5
+let result = []
+
 async function generatePDF(i) {
   const browser = await puppeteer.launch({
     // headless: true
@@ -57,16 +61,44 @@ async function generatePDF(i) {
   let renderTime = ejsEndTime - start
   let compileTime = end - ejsEndTime
   let totalTime = end - start
-  addToJSON({
+  result.push({
     renderTime,
     compileTime,
     totalTime
   })
+  // addToJSON({
+  //   renderTime,
+  //   compileTime,
+  //   totalTime
+  // })
 }
 
+const interval = setInterval(() => {
+  if (result.length === times) {
+    let max = 0, min = null, total = 0;
+
+    result.map((data) => {
+      max = Math.max(data.totalTime, max)
+      if (min === null) {
+        min = data.totalTime
+      } else {
+        max = Math.max(data.totalTime, max)
+      }
+
+      total += data.totalTime
+    })
+
+    addToJSON({
+      'Max': max,
+      'Min': min,
+      'total': total
+    })
+    clearInterval(interval)
+  }
+}, 1000);
 
 function main() {
-  let times = 10
+
   for (let i = 0; i < times; i++) {
     generatePDF(i)
   }
