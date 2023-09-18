@@ -32,7 +32,7 @@ async function generatePDF(i) {
 
   // console.log(userData.imageURL)
   // https://blog.logrocket.com/managing-pdfs-node-pdf-lib/
-  const template = fs.readFileSync(path.join(__dirname, './static/profile.ejs'), 'utf8');
+  const template = fs.readFileSync(path.join(__dirname, './static/profile.html'), 'utf8');
   const start = Date.now()
   const html = ejs.render(template, userData);
   const ejsEndTime = Date.now()
