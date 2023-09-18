@@ -1,5 +1,5 @@
 //@ts-check
-import fs from 'fs'
+const fs = require('fs')
 
 function addToJSON(data) {
   const output_file = 'output.json'
@@ -19,4 +19,4 @@ function addToJSON(data) {
 
 }
 
-export default addToJSON
+module.exports = addToJSON

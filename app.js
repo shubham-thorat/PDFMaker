@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 const ejs = require('ejs');
 const fs = require('fs');
 const path = require('path');
-const { default: addToJSON } = require('./calculator');
+const addToJSON = require('./calculator');
 
 
 const userData = {
@@ -20,7 +20,7 @@ const userData = {
 };
 async function generatePDF() {
   const browser = await puppeteer.launch({
-    // headless: false
+    // headless: true
   });
 
 
@@ -66,10 +66,10 @@ async function generatePDF() {
 
 
 function main() {
-  let times = 100
-  for (let i = 0; i < times; i++) {
-    generatePDF()
-  }
+  // let times = 100
+  // for (let i = 0; i < times; i++) {
+  generatePDF()
+  // }
 }
 
 main()
