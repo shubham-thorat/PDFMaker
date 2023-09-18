@@ -35,15 +35,15 @@ async function createPDF() {
   // });
 
 
-  // const imgBuffer = readFileSync("./static/user.jpeg");
-  // const img = await document.embedJpg(imgBuffer);
+  const imgBuffer = readFileSync("./static/user.jpeg");
+  const img = await document.embedJpg(imgBuffer);
 
-  // firstPage.drawImage(img, {
-  //   x: 400,
-  //   y: 700,
-  //   width: 100,
-  //   height: 100
-  // })
+  firstPage.drawImage(img, {
+    x: 400,
+    y: 700,
+    width: 100,
+    height: 100
+  })
 
   const pdfBytes = await document.save()
   // console.log(pdfBytes)
@@ -56,7 +56,7 @@ async function createPDF() {
   })
   console.log(JSON.stringify({
     'loadtime': loadtime - startTime,
-    'endTime': endTime - startTime
+    'totalTime': endTime - startTime
   }))
 }
 
