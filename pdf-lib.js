@@ -15,7 +15,7 @@ async function createPDF() {
 
 
   for (let x = 0; x < 10; x++) {
-    firstPage.moveTo(80, 750 - x);
+    firstPage.moveTo(80, 750 - x * 3);
     firstPage.drawText("Ms. Jane,", {
       font: courierBoldFont,
       size: 19,
