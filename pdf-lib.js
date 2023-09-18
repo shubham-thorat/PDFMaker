@@ -14,11 +14,14 @@ async function createPDF() {
   const firstPage = document.getPage(0);
 
 
-  firstPage.moveTo(80, 750);
-  firstPage.drawText("Ms. Jane,", {
-    font: courierBoldFont,
-    size: 19,
-  });
+  for (let x = 0; x < 10; x++) {
+    firstPage.moveTo(80, 750 - x);
+    firstPage.drawText("Ms. Jane,", {
+      font: courierBoldFont,
+      size: 19,
+    });
+  }
+
 
 
   // firstPage.moveTo(200, 750);
@@ -40,7 +43,7 @@ async function createPDF() {
 
   const pdfBytes = await document.save()
   // console.log(pdfBytes)
-  writeFileSync("jane-doe.pdf", pdfBytes);
+  writeFileSync("./pdf/jane-doe.pdf", pdfBytes);
 
   const endTime = Date.now();
   addToJSON({
