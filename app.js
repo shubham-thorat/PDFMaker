@@ -18,7 +18,7 @@ const userData = {
   // imageURL: './user.jpeg'
   // Add more user data as needed
 };
-async function generatePDF() {
+async function generatePDF(i) {
   const browser = await puppeteer.launch({
     // headless: true
   });
@@ -41,7 +41,7 @@ async function generatePDF() {
   // console.log('page : ', page)
   // Set the content to the rendered HTML
   await page.setContent(html);
-  await page.pdf({ path: 'profile_4.pdf', format: 'A4' });
+  await page.pdf({ path: `./pdf/profile_${i}.pdf`, format: 'A4' });
   const end = Date.now()
   // console.log('EJSRenderTime : ', ejsEndTime - start, "ConvertHTMLTOPDF: ", end - ejsEndTime, " TotalTime: ", end - start)
   // await page.addStyleTag({
@@ -66,10 +66,10 @@ async function generatePDF() {
 
 
 function main() {
-  // let times = 100
-  // for (let i = 0; i < times; i++) {
-  generatePDF()
-  // }
+  let times = 10
+  for (let i = 0; i < times; i++) {
+    generatePDF(i)
+  }
 }
 
 main()
