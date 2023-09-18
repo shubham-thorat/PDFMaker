@@ -14,12 +14,16 @@ async function createPDF() {
   const firstPage = document.getPage(0);
 
 
+
+  let prev = 750
   for (let x = 0; x < 10; x++) {
-    firstPage.moveTo(80, 750 - x * 3);
+    firstPage.moveTo(80, prev);
     firstPage.drawText("Ms. Jane,", {
       font: courierBoldFont,
       size: 19,
     });
+    prev -= 20
+    console.log("completed", x)
   }
 
 
