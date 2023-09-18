@@ -13,7 +13,6 @@ function addToJSON(data) {
   //   data['note'] = note
   // }
   // console.log("outputFile", result)
-  data['test_no'] = result.length
   result.push(data)
   fs.writeFileSync(output_file, JSON.stringify(result, null, 2), 'utf-8')
 

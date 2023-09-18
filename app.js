@@ -47,7 +47,6 @@ async function generatePDF(i) {
   await page.setContent(html);
   await page.pdf({ path: `./pdf/profile_${i}.pdf`, format: 'A4' });
   const end = Date.now()
-  // console.log('EJSRenderTime : ', ejsEndTime - start, "ConvertHTMLTOPDF: ", end - ejsEndTime, " TotalTime: ", end - start)
   // await page.addStyleTag({
   //   path: path.join(__dirname, './static/style.css')
   // })
@@ -61,6 +60,8 @@ async function generatePDF(i) {
   let renderTime = ejsEndTime - start
   let compileTime = end - ejsEndTime
   let totalTime = end - start
+
+  console.log('EJSRenderTime : ', renderTime, "ConvertHTMLTOPDF: ", compileTime, " TotalTime: ", totalTime)
   result.push({
     renderTime,
     compileTime,

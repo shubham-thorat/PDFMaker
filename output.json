@@ -1,14 +1,7 @@
 [
   {
-    "renderTime": 7,
-    "compileTime": 462,
-    "totalTime": 469,
-    "test_no": 0
-  },
-  {
-    "renderTime": 10,
-    "compileTime": 223,
-    "totalTime": 233,
-    "test_no": 1
+    "Max": 568,
+    "Min": 327,
+    "total": 2071
   }
 ]
