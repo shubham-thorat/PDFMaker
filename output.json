@@ -281,5 +281,18 @@
     "Min": 4945,
     "total": 4945,
     "count": 1
+  },
+  {
+    "data": [
+      {
+        "renderTime": 106,
+        "compileTime": 1300,
+        "totalTime": 1406
+      }
+    ],
+    "Max": 1406,
+    "Min": 1406,
+    "total": 1406,
+    "count": 1
   }
 ]
